@@ -27,7 +27,7 @@
       .then(data => {
         const geojson = L.geoJSON(data, {
           onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.name || 'No Name');
+            layer.bindPopup(feature.properties.shapeName || 'No Name');
           }
         }).addTo(map);
         window.currentGeoJSON = data;
