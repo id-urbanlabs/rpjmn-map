@@ -22,7 +22,7 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    fetch('data/adm2.geojson')  // <-- Update this path if needed
+    fetch('adm2.geojson')  // <-- Update this path if needed
       .then(res => res.json())
       .then(data => {
         const geojson = L.geoJSON(data, {
